@@ -1,21 +1,27 @@
+"""Caclculate compound interst from a given prinipal, time, and interest rate."""
+
+
 def compound_interest(principal, rate, time, number):
-    amount = principal * pow( 1+(rate/number), number*time)
-    return amount;
+    """Calculate compund interest."""
+    amount = principal * pow(1 + (rate / number), number * time)
+    return amount
+
 
 def main():
-    principal = float(input('Principal amount: '))
-    rate = float(input('Interest rate: '))
-    time = float(input('Number of Years: '))
-    number = float(input('Number of times interest compunded per year: '))
+    """Take input and outputs answer."""
+    principal = float(input("Principal amount: "))
+    rate = float(input("Interest rate: "))
+    time = float(input("Number of Years: "))
+    number = float(input("Number of times interest compunded per year: "))
 
-    rate = rate/100
+    rate = rate / 100
 
     amount = compound_interest(principal, rate, time, number)
-    ci = amount - principal
+    compund_interest = amount - principal
 
-    print(f'Compound interest = {ci:.2f}')
-    print(f'Total amount = {amount:.2f}')
+    print(f"Compound interest = {compund_interest:.2f}")
+    print(f"Total amount = {amount:.2f}")
 
 
 if __name__ == "__main__":
-    main() 
+    main()

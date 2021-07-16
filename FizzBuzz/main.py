@@ -1,8 +1,15 @@
-def Fizzzzzzzzzzzzz(n):
-    return ((n%3==0)*"Fizz" + (n%5==0)*"Buzz") or n
+"""Fizzbuzz."""
 
-def Buzzzzzzzzzzzzz():
-    return("\n".join([str(Fizzzzzzzzzzzzz(i)) for i in range(100001)]))
+
+def fizz(num):
+    """Check if n is a multiple of 3 or 5 or neither."""
+    return ((num % 3 == 0)*"Fizz" + (num % 5 == 0)*"Buzz") or num
+
+
+def buzz():
+    """Convert output from fizz into a printable format."""
+    return "\n".join([str(fizz(i)) for i in range(100001)])
+
 
 if __name__ == "__main__":
-    print(Buzzzzzzzzzzzzz()) 
+    print(buzz())

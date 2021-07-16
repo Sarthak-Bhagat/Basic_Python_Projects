@@ -1,10 +1,14 @@
-def is_prime(x):
-    return all(x % i for i in range(2, x))
+"""Prim number checker."""
 
 
+def is_prime(number):
+    """Check if number is prime."""
+    return all(number % i for i in range(2, number))
 
-def next_prime(x):
-    return min([a for a in range(x+1, 2*x) if is_prime(a)])
+
+def next_prime(number):
+    """Get the smallest next prime number."""
+    return min([a for a in range(number+1, 2*number) if is_prime(a)])
 
 
 inp = int(input("Enter a number "))
